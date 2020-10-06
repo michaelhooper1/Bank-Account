@@ -34,6 +34,13 @@ void account::create_account()
     }
 
     cout << "\nEnter Type of The account (C/S) : "; cin >> type;
+    while ((type != 'S') && (type != 'C')) {
+        cout << "Invalid Account type, please try again: ";
+
+        cin.clear();
+        cin.ignore();
+    }
+
     type = toupper(type);
     cout << "\nEnter The Initial amount(>=500 for Saving and >=1000 for current ) : ";
     cin >> deposit;
